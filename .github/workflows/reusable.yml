@@ -15,6 +15,7 @@ jobs:
         env:
           SECRET: ${{ secrets.DUMMY_MARKER }}
       # Deger ASLA yazdirilmaz, sadece varlik kontrolu
-      - run: echo "SECRET ERISIMI (callee): ${SECRET:+VAR}"
+      - run: |
+          echo "SECRET ERISIMI (callee): ${SECRET:+VAR}"
         env:
           SECRET: ${{ secrets.DUMMY_MARKER }}
